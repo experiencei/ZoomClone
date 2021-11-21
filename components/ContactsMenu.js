@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View , Image } from 'react-native'
 import AntDesign from "react-native-vector-icons/AntDesign";
 
 
@@ -28,14 +28,23 @@ const contactsMenuButtons = [
 const ContactsMenu = () => {
     return (
         <View style={styles.container}>
-            <View style={styles.row}>
-                    <View style={styles.starredIcon}>
+        {contactsMenuButtons.map((contact, index) =>
+            <View 
+            key={index}
+            style={styles.row}>
+            {contact.type== "starred" ?(<View style={styles.starredIcon}>
                          <AntDesign name="star" size={30} color="#efefef" />
-                    </View>
+                    </View>) : (
+                         <Image
+                         source={contact.photo} style={styles.image}/>
+                    ) }
+                    
                     <Text style={styles.text}>
                         Starred
                     </Text>
             </View>
+        )}
+            
         </View>
     )
 }
@@ -63,5 +72,8 @@ const styles = StyleSheet.create({
         justifyContent : 'center',
         alignItems : 'center',
         borderRadius : 200
-    }
+    },
+    image : {
+        
+    },
 })
