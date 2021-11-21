@@ -80,4 +80,14 @@ const styles = StyleSheet.create({
          backgroundColor : "#1c1c1c",
          flex: 1,
     },
+    tile : {
+        justifyContent : "center",
+        alignItems : "center",
+        marginTop : 15,
+        height : 50,
+    },
+    textTile : {
+        color: "white",
+        marginTop :10
+    }
 })
