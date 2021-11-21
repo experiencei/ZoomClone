@@ -30,7 +30,7 @@ const MeetingRoom = () => {
                       onPress={() =>{}}
                       style={styles.startMeetingButton}
                       >
-                      <Text style={{color : "white"}}>Start Meeting</Text>
+                      <Text style={{color : "white" , fontWeight : "bold"}}>Start Meeting</Text>
                       </TouchableOpacity>
                  </View>
             </View>
