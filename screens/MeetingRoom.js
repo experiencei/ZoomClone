@@ -4,7 +4,14 @@ import { StyleSheet, Text, View } from 'react-native'
 const MeetingRoom = () => {
     return (
         <View>
-            <Text></Text>
+            <View style={styles.startMeetingContainer}>
+                 <View style={styles.info}>
+
+                 </View>
+                 <View style={styles.info}>
+
+                 </View>
+            </View>
         </View>
     )
 }
@@ -13,6 +20,10 @@ export default MeetingRoom
 
 const styles = StyleSheet.create({
     container: {
-        
-    }
+
+    },
+    startMeetingContainer : {
+
+    },
+    info : {}
 })
