@@ -43,7 +43,7 @@ const ContactsMenu = () => {
                         {contact.name}
                     </Text>
             </View>
-        )}
+        )} 
             
         </View>
     )
