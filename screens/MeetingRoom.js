@@ -133,7 +133,8 @@ const styles = StyleSheet.create({
     cameraContainer : {
         flex: 1,
         backgroundColor : "black",
-        justifyContent : "center"
+        justifyContent : "center",
+        flexDirection : "row",
     },
     activeUserContainer : {
         borderColor : "gray",
