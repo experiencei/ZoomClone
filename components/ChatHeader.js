@@ -18,5 +18,19 @@ const ChatHeader = ({ setModalVisible}) => {
 export default ChatHeader
 
 const styles = StyleSheet.create({
-   container: {}
+   container: {
+       flexDirection: "row",
+       justifyContent  : "space-between",
+       paddingVertical : 20,
+       paddingHorizontal : 10,
+   },
+   heading: {
+       color: "white",
+       fontSize : 20,
+       fontWeight : "bold",
+   },
+   buttonText: {
+       color: "white",
+       fontSize: 20
+    }
 })
