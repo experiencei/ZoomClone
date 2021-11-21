@@ -69,13 +69,16 @@ const MeetingRoom = () => {
         <View style={styles.container}>
         {startCameras ? (
             <SafeAreaView>
-            <Camera
-           type={"front"}
-           style={{
-               width : "100%",
-               height : 600,
-           }}
-        > </Camera>
+              <View style={styles.cameraContainer}>
+                        <Camera
+                    type={"front"}
+                    style={{
+                        width : "100%",
+                        height : 600,
+                    }}
+                    > </Camera>
+              </View>
+           
           <View style={styles.menu}>
           {menuIcons.map((icon , index) => 
                  <TouchableOpacity
@@ -119,6 +122,7 @@ const styles = StyleSheet.create({
         marginTop :10
     },
     menu :{
-        
+        flexDirection : "row",
+        justifyContent : "space-around"
     }
 })
