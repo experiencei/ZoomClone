@@ -3,7 +3,7 @@ import { StyleSheet, Text, TextInput, View } from 'react-native'
 
 const MeetingRoom = () => {
   const [name , setName] = useState('')
-
+  const [roomId , setRoomId] = useState('')
     return (
         <View style={styles.container}>
             <View style={styles.startMeetingContainer}>
@@ -17,7 +17,13 @@ const MeetingRoom = () => {
                      />
                  </View>
                  <View style={styles.info}>
-
+                    <TextInput 
+                            style={styles.textInput}
+                            value={roomId}
+                            placeholder="Enter RoomId"
+                            onChangeText={text => setRoomId(text)}
+                            placeholderTextColor="#767476"
+                        />
                  </View>
             </View>
         </View>
