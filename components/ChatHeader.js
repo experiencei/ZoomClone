@@ -1,18 +1,16 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import ChatHeader from './ChatHeader'
 
-const Chat = ( { modalVisible ,setModalVisible}) => {
+const ChatHeader = () => {
     return (
         <View style={styles.container}>
-            <ChatHeader/>
+           
         </View>
     )
 }
 
-export default Chat
+export default ChatHeader
 
 const styles = StyleSheet.create({
-  container: {}
-
+   container: {}
 })
