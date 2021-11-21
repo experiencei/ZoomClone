@@ -112,6 +112,12 @@ const MeetingRoom = () => {
                      <Text style={styles.textTile}>{icon.title}</Text>
                  </TouchableOpacity>   
                  )}
+                 <TouchableOpacity
+                      style={styles.tile}
+                 >
+                     <FontAwesome name={icon.name} size={24} color="#efefef" />
+                     <Text style={styles.textTile}>Chat</Text>
+                 </TouchableOpacity> 
           </View>
         </SafeAreaView>) : (
             <StartMeeting 
