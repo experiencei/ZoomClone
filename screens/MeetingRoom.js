@@ -1,5 +1,5 @@
 import React , {useState , useEffect} from 'react'
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TextInput, TouchableOpacity, View ,SafeAreaView } from 'react-native'
 import StartMeeting from '../components/StartMeeting'
 import { io } from "socket.io-client";
 import { Camera } from 'expo-camera';
@@ -41,7 +41,16 @@ const MeetingRoom = () => {
   }, [])
     return (
         <View style={styles.container}>
-        {startCameras ? (<Text> Start Camera</Text>) : (
+        {startCameras ? (
+            <SafeAreaView>
+            <Camera
+           type={"front"}
+           style={{
+               width : "100%",
+               height : 600,
+           }}
+        > </Camera>
+        </SafeAreaView>) : (
             <StartMeeting 
             name={name} 
             setName={setName}
