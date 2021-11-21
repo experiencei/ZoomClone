@@ -14,10 +14,15 @@ const contactsMenuButtons = [
         photo : require('../assets/home_bg.jpg')
     },
     {
-        type: 'starred',
+        type: 'contact',
         name : "Experience Iq",
         photo : require('../assets/home_bg.jpg')
-    }
+    },
+    {
+        type: 'contact',
+        name : "Xperience jr",
+        photo : require('../assets/home_bg.jpg')
+    },
 ]
 
 const ContactsMenu = () => {
