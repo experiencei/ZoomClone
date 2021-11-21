@@ -20,10 +20,13 @@ const MeetingRoom = () => {
                     <TextInput 
                             style={styles.textInput}
                             value={roomId}
-                            placeholder="Enter RoomId"
+                            placeholder="Enter Room Id"
                             onChangeText={text => setRoomId(text)}
                             placeholderTextColor="#767476"
                         />
+                 </View>
+                 <View>
+                     
                  </View>
             </View>
         </View>
