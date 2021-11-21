@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 
 
-const StartMeeting = ({ name , setName , roomId , setRoomId}) => {
+const StartMeeting = ({ name , setName , roomId , setRoomId }) => {
     return (
         <View style={styles.startMeetingContainer}>
                  <View style={styles.info}>
