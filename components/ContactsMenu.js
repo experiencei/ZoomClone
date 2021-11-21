@@ -9,13 +9,14 @@ const contactsMenuButtons = [
         
     },
     {
-        type: 'starred',
+        type: 'contact',
         name : "jessy The",
-        photo :
-    }
+        photo : require('../assets/home_bg.jpg')
+    },
     {
         type: 'starred',
-
+        name : "Experience Iq",
+        photo : require('../assets/home_bg.jpg')
     }
 ]
 
