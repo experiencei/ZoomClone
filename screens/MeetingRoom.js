@@ -7,9 +7,15 @@ const MeetingRoom = () => {
   const [name , setName] = useState('')
   const [roomId , setRoomId] = useState('')
 
+  let socket;
+
+
   useEffect(() => {
       const API_URL = "http://localhost:3001"
-      socket =io(`${API_URL}`)
+         socket =io(`${API_URL}`)
+      socket.on("connection" , ()=> {
+
+      })
   }, [])
     return (
         <View style={styles.container}>
