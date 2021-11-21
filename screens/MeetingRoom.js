@@ -2,6 +2,7 @@ import React , {useState , useEffect} from 'react'
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import StartMeeting from '../components/StartMeeting'
 import { io } from "socket.io-client";
+import { Camera } from 'expo-camera';
  
 let socket;
 
@@ -11,7 +12,18 @@ const MeetingRoom = () => {
   const [roomId , setRoomId] = useState()
   const [activeUsers , setActiveUsers] = useState()
   const [startCameras , setStartCameras] = useState(false)
+
+  const startCamera = () => {
+      const status = await Camera.requestPermissionAsync();
+      if (status === "granted"){
+        setStartCameras(true)
+      }  else {
+          Alert.alert("Access denied")
+      }
+  }
+
   const joinRoom = () => {
+      startCamera()
       socket.emit('join-room' , {
           roomId : roomId , userName : name
       })
