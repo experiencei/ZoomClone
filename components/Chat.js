@@ -39,6 +39,11 @@ const styles = StyleSheet.create({
   },
   chatMessages : {
 
+  },
+  chatFormContainer : {
+      borderColor : "#2f2f2f",
+      padding : 12 ,
+      borderTopWidth : 1,
   }
 
 })
