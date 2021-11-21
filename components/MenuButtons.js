@@ -30,15 +30,18 @@ const items = [
 const MenuButtons = () => {
     return (
         <View style={styles.container}>
-            <View style={styles.buttonContainer}>
+        {items.map((index , {title , name} ) =>(
+            <View style={styles.buttonContainer} key={index}>
                 <TouchableOpacity
                 style={styles.button}>
-                     <FontAwesome name="video-camera" size={23} color="#efefef" />
+                     <FontAwesome name={name} size={23} color="#efefef" />
                 </TouchableOpacity>
                 <Text style={styles.menuText}>
-                    New Meeting
+                  {title}
                 </Text>
-            </View>
+            </View>)
+        )}
+           
         </View>
     )
 }
@@ -50,7 +53,9 @@ const styles = StyleSheet.create({
         marginTop : 25,
         paddingBottom : 10,
         borderBottomColor: "#1F1F1F",
-        borderBottomWidth : 1
+        borderBottomWidth : 1,
+        flexDirection: "row",
+        justifyContent: "space-between",
     },
     buttonContainer : {
            alignItems : "center",
