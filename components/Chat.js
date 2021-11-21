@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View , SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View , SafeAreaView, TextInput } from 'react-native'
 import ChatHeader from './ChatHeader'
 
 const Chat = ({ modalVisible ,setModalVisible}) => {
@@ -14,8 +14,11 @@ const Chat = ({ modalVisible ,setModalVisible}) => {
                 {/* type message */}
                 <View style={styles.chatFormContainer}>
                      <Text style={{color: "white"}}> Send to : Everyone</Text>
-                     <View>
-                         
+                     <View style={styles.chatForm}>
+                         <TextInput
+                             style={styles.textInput}
+                             placeholder="Tap here to chat"
+                         />
                      </View>
                 </View>
             </SafeAreaView>
