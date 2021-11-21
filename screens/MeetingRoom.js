@@ -9,7 +9,7 @@ let socket;
 const MeetingRoom = () => {
   const [name , setName] = useState('')
   const [roomId , setRoomId] = useState('')
-
+  const [activeUsers , setActiveUsers] = useState('')
   const joinRoom = () => {
       socket.emit('join-room' , {
           roomId : roomId , userName : name
@@ -17,10 +17,13 @@ const MeetingRoom = () => {
   }
 
   useEffect(() => {
-      const API_URL = "http://e70b4b991fc5.ngrok.io"
-         socket =io(`${API_URL}`)
+    //   const API_URL = "http://e70b4b991fc5.ngrok.io"
+      socket =io('http://e70b4b991fc5.ngrok.io')
       socket.on("connection" , ()=> {
-
+       
+      })
+      socket.on("all-users" , users => {
+        setActiveUsers(users)
       })
   }, [])
     return (
