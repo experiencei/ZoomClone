@@ -69,6 +69,7 @@ const MeetingRoom = () => {
         <View style={styles.container}>
         {startCameras ? (
             <SafeAreaView style={{flex : 1}}>
+            <View style={styles.activeUsersContainer}>
               <View style={styles.cameraContainer}>
                         <Camera
                     type={"front"}
@@ -83,7 +84,7 @@ const MeetingRoom = () => {
                     </View>
                     )}
               </View>
-           
+              </View>
           <View style={styles.menu}>
           {menuIcons.map((icon , index) => 
                  <TouchableOpacity
@@ -135,6 +136,8 @@ const styles = StyleSheet.create({
         backgroundColor : "black",
         justifyContent : "center",
         flexDirection : "row",
+        flexWrap : "wrap",
+        alignItems : "center"
     },
     activeUserContainer : {
         borderColor : "gray",
