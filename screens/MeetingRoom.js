@@ -132,8 +132,6 @@ const styles = StyleSheet.create({
         justifyContent : "space-around"
     } ,
     cameraContainer : {
-        flex: 1,
-        backgroundColor : "black",
         justifyContent : "center",
         flexDirection : "row",
         flexWrap : "wrap",
@@ -146,5 +144,12 @@ const styles = StyleSheet.create({
         height : 200,
         justifyContent : "center",
         alignItems : "center"
+    },
+    activeUsersContainer : {
+        flex: 1,
+        width:  "100%",
+        justifyContent : "center",
+        alignItems : "center",
+        backgroundColor : "black",
     }
 })
