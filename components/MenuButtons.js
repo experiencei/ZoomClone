@@ -30,17 +30,44 @@ const items = [
 const MenuButtons = () => {
     return (
         <View style={styles.container}>
-        {items.map((index , {title , name} ) =>(
-            <View style={styles.buttonContainer} key={index}>
+        {/* {items.map((index , {title , name} ) =>( */}
+            <View style={styles.buttonContainer} >
                 <TouchableOpacity
                 style={styles.button}>
-                     <FontAwesome name={name} size={23} color="#efefef" />
+                     <FontAwesome name="video-camera" size={23} color="#efefef" />
                 </TouchableOpacity>
                 <Text style={styles.menuText}>
-                  {title}
+                New Meeting
                 </Text>
-            </View>)
-        )}
+            </View>
+            <View style={styles.buttonContainer} >
+                <TouchableOpacity
+                style={styles.button}>
+                     <FontAwesome name="plus-square" size={23} color="#efefef" />
+                </TouchableOpacity>
+                <Text style={styles.menuText}>
+                join
+                </Text>
+            </View>
+            <View style={styles.buttonContainer} >
+                <TouchableOpacity
+                style={styles.button}>
+                     <FontAwesome name="calendar" size={23} color="#efefef" />
+                </TouchableOpacity>
+                <Text style={styles.menuText}>
+                 Schedule
+                </Text>
+            </View>
+            <View style={styles.buttonContainer} >
+                <TouchableOpacity
+                style={styles.button}>
+                     <FontAwesome name="upload" size={23} color="#efefef" />
+                </TouchableOpacity>
+                <Text style={styles.menuText}>
+                  Share Screen
+                </Text>
+            </View>
+        {/* )} */}
            
         </View>
     )
