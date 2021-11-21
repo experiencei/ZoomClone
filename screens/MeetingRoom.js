@@ -77,12 +77,14 @@ const MeetingRoom = () => {
            }}
         > </Camera>
           <View style={styles.menu}>
+          {menuIcons.map((icon , index) => 
                  <TouchableOpacity
                       style={styles.tile}
                  >
                      <FontAwesome name={"microphone"} size={24} color="#efefef" />
                      <Text style={styles.textTile}>Mute</Text>
                  </TouchableOpacity>   
+                 )}
           </View>
         </SafeAreaView>) : (
             <StartMeeting 
