@@ -1,14 +1,15 @@
 import React , {useState , useEffect} from 'react'
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import StartMeeting from '../components/StartMeeting'
-
+import { io } from "socket.io-client";
+ 
 const MeetingRoom = () => {
   const [name , setName] = useState('')
   const [roomId , setRoomId] = useState('')
 
   useEffect(() => {
-      
-     
+      const API_URL = "http://localhost:3001"
+      socket =io(`${API_URL}`)
   }, [])
     return (
         <View style={styles.container}>
