@@ -73,8 +73,8 @@ const MeetingRoom = () => {
                         <Camera
                     type={"front"}
                     style={{
-                        width : "100%",
-                        height : 600,
+                        width : activeUsers.length === 0 ?"100%" : 200,
+                        height : activeUsers.length === 0 ?  600 : 200,
                     }}
                     > </Camera>
                     {activeUsers.map((user , index) =>
@@ -134,5 +134,13 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor : "black",
         justifyContent : "center"
+    },
+    activeUserContainer : {
+        borderColor : "gray",
+        borderWidth : 1,
+        width : 200,
+        height : 200,
+        justifyContent : "center",
+        alignItems : "center"
     }
 })
