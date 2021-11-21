@@ -36,7 +36,7 @@ const menuIcons = [
 const MeetingRoom = () => {
   const [name , setName] = useState()
   const [roomId , setRoomId] = useState()
-  const [activeUsers , setActiveUsers] = useState()
+  const [activeUsers , setActiveUsers] = useState(["Experience" , "Makfeni" , "Aloma"])
   const [startCameras , setStartCameras] = useState(false)
 
   const startCamera = async () => {
@@ -77,6 +77,9 @@ const MeetingRoom = () => {
                         height : 600,
                     }}
                     > </Camera>
+                    {activeUsers.map((user , index) => <View key={index} style={styles.activeUserContainer}>
+
+                    </View>}
               </View>
            
           <View style={styles.menu}>
@@ -127,6 +130,7 @@ const styles = StyleSheet.create({
     } ,
     cameraContainer : {
         flex: 1,
-        backgroundColor : "black"
+        backgroundColor : "black",
+        justifyContent : "center"
     }
 })
