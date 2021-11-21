@@ -8,6 +8,31 @@ import { Camera } from 'expo-camera';
 let socket;
 
 
+const menuIcons = [
+    {
+        id : 1,
+        name : "microphone",
+        title : "Mute",
+        customColor : "#efefef"
+    },
+    {
+        id : 2,
+        name : "video-camera",
+        title : "Stop Video",
+        
+    },
+    {
+        id : 3,
+        name : "upload",
+        title : "Share Content",
+    },
+    {
+        id : 4,
+        name : "group",
+        title : "Participants",
+    },
+]
+
 const MeetingRoom = () => {
   const [name , setName] = useState()
   const [roomId , setRoomId] = useState()
