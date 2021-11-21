@@ -1,5 +1,5 @@
 import React , {useState , useEffect} from 'react'
-import { StyleSheet, Text, TextInput, TouchableOpacity, View ,SafeAreaView } from 'react-native'
+import {Modal, StyleSheet, Text, TextInput, TouchableOpacity, View ,SafeAreaView, Alert } from 'react-native'
 import StartMeeting from '../components/StartMeeting'
 import FontAwesome from "react-native-vector-icons/FontAwesome"
 import { io } from "socket.io-client";
@@ -38,6 +38,7 @@ const MeetingRoom = () => {
   const [roomId , setRoomId] = useState()
   const [activeUsers , setActiveUsers] = useState(["Experience" , "Makfeni" , "Aloma"])
   const [startCameras , setStartCameras] = useState(false)
+  const [modalVisible , setModalVisible] = useState(flase)
 
   const startCamera = async () => {
       const status = await Camera.requestPermissionAsync();
@@ -70,6 +71,22 @@ const MeetingRoom = () => {
         <View style={styles.container}>
         {startCameras ? (
             <SafeAreaView style={{flex : 1}}>
+             <Modal 
+               animationType="slide"
+               transparent={false}
+               presentationStyle={"fullScreen"}
+               visible={modalVisible}
+               onRequestClose={() => {
+                   Alert.alert
+               }}
+             >
+
+
+
+             </Modal>
+    
+    
+
             <View style={styles.activeUsersContainer}>
               <View style={styles.cameraContainer}>
                         <Camera
