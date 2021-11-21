@@ -27,12 +27,18 @@ const items = [
 ]
 
 
-const MenuButtons = () => {
+const MenuButtons = ({ navigation}) => {
+    const openMeeting = () => {
+        navigation.navigate("Room")
+    }
+
+
     return (
         <View style={styles.container}>
         {/* {items.map((index , {title , name} ) =>( */}
             <View style={styles.buttonContainer} >
                 <TouchableOpacity
+                onPress={() => openMeeting}
                 style={styles.buttonx}>
                      <FontAwesome name="video-camera" size={23} color="#efefef" />
                 </TouchableOpacity>
