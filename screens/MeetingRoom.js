@@ -17,7 +17,7 @@ const MeetingRoom = () => {
   }
 
   useEffect(() => {
-      const API_URL = "http://localhost:3001"
+      const API_URL = "http://e70b4b991fc5.ngrok.io"
          socket =io(`${API_URL}`)
       socket.on("connection" , ()=> {
 
