@@ -77,12 +77,11 @@ const MeetingRoom = () => {
                presentationStyle={"fullScreen"}
                visible={modalVisible}
                onRequestClose={() => {
-                   Alert.alert
+                   Alert.alert("Modal has been closed.")
+                   setModalVisible(!modalVisible)
                }}
              >
-
-
-
+                 <Text></Text>
              </Modal>
     
     
