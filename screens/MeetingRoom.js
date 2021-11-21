@@ -1,5 +1,5 @@
 import React , {useState} from 'react'
-import { StyleSheet, Text, TextInput, View } from 'react-native'
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 
 const MeetingRoom = () => {
   const [name , setName] = useState('')
@@ -25,8 +25,13 @@ const MeetingRoom = () => {
                             placeholderTextColor="#767476"
                         />
                  </View>
-                 <View>
-                     
+                 <View style={{alignItems: 'center'}}>
+                      <TouchableOpacity 
+                      onPress={() =>{}}
+                      style={styles.startMeetingButton}
+                      >
+                      <Text style={{color : "white"}}>Start Meeting</Text>
+                      </TouchableOpacity>
                  </View>
             </View>
         </View>
