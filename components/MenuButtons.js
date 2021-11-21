@@ -33,7 +33,7 @@ const MenuButtons = () => {
         {/* {items.map((index , {title , name} ) =>( */}
             <View style={styles.buttonContainer} >
                 <TouchableOpacity
-                style={styles.button}>
+                style={styles.buttonx}>
                      <FontAwesome name="video-camera" size={23} color="#efefef" />
                 </TouchableOpacity>
                 <Text style={styles.menuText}>
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     },
     buttonContainer : {
            alignItems : "center",
-
+            flex : 1,
     },
     menuText : {
         color: "#858585",
@@ -97,7 +97,15 @@ const styles = StyleSheet.create({
     button : {
         width : 50,
         height : 50,
-        backgroundColor :"blue",
+        backgroundColor :"#0470DC",
+        borderRadius : 15,
+        justifyContent : "center",
+        alignItems : "center",
+    },
+    buttonx : {
+        width : 50,
+        height : 50,
+        backgroundColor:"#ff751F",
         borderRadius : 15,
         justifyContent : "center",
         alignItems : "center",
