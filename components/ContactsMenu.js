@@ -1,14 +1,37 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import AntDesign from "react-native-vector-icons/AntDesign"
 
 const ContactsMenu = () => {
     return (
-        <View>
-            <Text></Text>
+        <View style={styles.container}>
+            <View style={styles.row}>
+                    <View style={styles.starredIcon}>
+                         <AntDesign name="star" size={30} color="#efefef" />
+                    </View>
+                    <Text style={styles.text}>
+
+                    </Text>
+            </View>
         </View>
     )
 }
 
 export default ContactsMenu
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container: {
+
+    },
+    text : {},
+    row : {
+        flexDirection : 'row',
+    },
+    starredIcon :{
+        backgroundColor : "#333333",
+        width : 55,
+        height : 55,
+        justifyContent : 'center',
+        alignItems : 'center'
+    }
+})
