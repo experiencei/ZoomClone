@@ -1,12 +1,14 @@
 import React from 'react'
 import { StyleSheet, Text, View , Pressable } from 'react-native'
 
-const ChatHeader = () => {
+const ChatHeader = ({ setModalVisible}) => {
     return (
         <View style={styles.container}>
-            <Pressable>
-                 <Text style={styles.}></Text>
+            <Pressable
+            onPress={() => setModalVisible(false)}>
+                 <Text style={styles.buttonText}>Close</Text>
             </Pressable>
+            <Text style={styles.heading}>Chat</Text>
         </View>
     )
 }
