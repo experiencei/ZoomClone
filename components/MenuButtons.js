@@ -38,7 +38,7 @@ const MenuButtons = ({ navigation}) => {
         {/* {items.map((index , {title , name} ) =>( */}
             <View style={styles.buttonContainer} >
                 <TouchableOpacity
-                onPress={() => openMeeting}
+                onPress={openMeeting}
                 style={styles.buttonx}>
                      <FontAwesome name="video-camera" size={23} color="#efefef" />
                 </TouchableOpacity>
