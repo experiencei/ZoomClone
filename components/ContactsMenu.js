@@ -26,12 +26,15 @@ const styles = StyleSheet.create({
     text : {},
     row : {
         flexDirection : 'row',
+        marginTop : 20,
+        alignItems : 'center'
     },
     starredIcon :{
         backgroundColor : "#333333",
         width : 55,
         height : 55,
         justifyContent : 'center',
-        alignItems : 'center'
+        alignItems : 'center',
+        borderRadius : 200
     }
 })
