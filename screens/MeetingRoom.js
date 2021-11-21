@@ -36,7 +36,7 @@ const menuIcons = [
 const MeetingRoom = () => {
   const [name , setName] = useState()
   const [roomId , setRoomId] = useState()
-  const [activeUsers , setActiveUsers] = useState(["Experience" , "Makfeni" , "Aloma"])
+  const [activeUsers , setActiveUsers] = useState([])
   const [startCameras , setStartCameras] = useState(false)
   const [modalVisible , setModalVisible] = useState(flase)
 
@@ -113,6 +113,7 @@ const MeetingRoom = () => {
                  </TouchableOpacity>   
                  )}
                  <TouchableOpacity
+                 onPress={() => setModalVisible(true)}
                       style={styles.tile}
                  >
                      <FontAwesome name={icon.name} size={24} color="#efefef" />
