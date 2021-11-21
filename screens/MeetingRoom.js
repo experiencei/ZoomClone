@@ -77,9 +77,11 @@ const MeetingRoom = () => {
                         height : 600,
                     }}
                     > </Camera>
-                    {activeUsers.map((user , index) => <View key={index} style={styles.activeUserContainer}>
-
-                    </View>}
+                    {activeUsers.map((user , index) =>
+                    <View key={index} style={styles.activeUserContainer}>
+                       <Text style={{color : "white"}}>{user}</Text>
+                    </View>
+                    )}
               </View>
            
           <View style={styles.menu}>
