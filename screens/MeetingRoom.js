@@ -3,12 +3,18 @@ import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-nativ
 import StartMeeting from '../components/StartMeeting'
 import { io } from "socket.io-client";
  
+let socket;
+
+
 const MeetingRoom = () => {
   const [name , setName] = useState('')
   const [roomId , setRoomId] = useState('')
 
-  let socket;
-
+  const joinRoom = () => {
+      socket.emit('join-room' , {
+          roomId : roomId , userName : name
+      })
+  }
 
   useEffect(() => {
       const API_URL = "http://localhost:3001"
@@ -24,6 +30,7 @@ const MeetingRoom = () => {
             setName={setName}
             roomId={roomId}
             setRoomId={setRoomId}
+            joinRoom={joinRoom}
             />
         </View>
     )
