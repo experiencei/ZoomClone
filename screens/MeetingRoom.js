@@ -1,6 +1,7 @@
 import React , {useState , useEffect} from 'react'
-import { StyleSheet, Text, TextInput, TouchableOpacity, View ,SafeAreaView } from 'react-native'
+import { StyleSheet, Text, TextInput, TouchableOpacity, View ,SafeAreaView , TouchableOpacity } from 'react-native'
 import StartMeeting from '../components/StartMeeting'
+import FontAwesome from "react-native-vector-icons/FontAwesome"
 import { io } from "socket.io-client";
 import { Camera } from 'expo-camera';
  
@@ -51,7 +52,9 @@ const MeetingRoom = () => {
            }}
         > </Camera>
           <View style={styles.menu}>
-                  
+                 <TouchableOpacity>
+                     <FontAwesome name={"microphone"} size={24} color="#efefef" />
+                 </TouchableOpacity>   
           </View>
         </SafeAreaView>) : (
             <StartMeeting 
