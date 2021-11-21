@@ -68,7 +68,7 @@ const MeetingRoom = () => {
     return (
         <View style={styles.container}>
         {startCameras ? (
-            <SafeAreaView>
+            <SafeAreaView style={{flex : 1}}>
               <View style={styles.cameraContainer}>
                         <Camera
                     type={"front"}
@@ -124,5 +124,9 @@ const styles = StyleSheet.create({
     menu :{
         flexDirection : "row",
         justifyContent : "space-around"
+    } ,
+    cameraContainer : {
+        flex: 1,
+        backgroundColor : "black"
     }
 })
