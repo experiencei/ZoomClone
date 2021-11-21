@@ -2,6 +2,31 @@ import React from 'react'
 import { StyleSheet, Text, View , TouchableOpacity } from 'react-native'
 import FontAwesome from "react-native-vector-icons/FontAwesome"
 
+
+const items = [
+  {
+      id : 1,
+      name : "video-camera",
+      title : "New Meeting"
+  },
+  {
+      id : 2,
+      name : "plus-square",
+      title : "join"
+  },
+  {
+      id : 3,
+      name : "calendar",
+      title : "Schedule"
+  },
+  {
+      id : 1,
+      name : "upload",
+      title : "Share Screen"
+  },
+]
+
+
 const MenuButtons = () => {
     return (
         <View style={styles.container}>
