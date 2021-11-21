@@ -10,7 +10,7 @@ const ContactsMenu = () => {
                          <AntDesign name="star" size={30} color="#efefef" />
                     </View>
                     <Text style={styles.text}>
-
+                        Starred
                     </Text>
             </View>
         </View>
@@ -23,7 +23,11 @@ const styles = StyleSheet.create({
     container: {
 
     },
-    text : {},
+    text : {
+        color: "white",
+        paddingLeft : 15,
+        fontSize : 18
+    },
     row : {
         flexDirection : 'row',
         marginTop : 20,
