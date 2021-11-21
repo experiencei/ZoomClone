@@ -1,6 +1,23 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import AntDesign from "react-native-vector-icons/AntDesign"
+import AntDesign from "react-native-vector-icons/AntDesign";
+
+
+const contactsMenuButtons = [
+    {
+        type: 'starred',
+        
+    },
+    {
+        type: 'starred',
+        name : "jessy The",
+        photo :
+    }
+    {
+        type: 'starred',
+
+    }
+]
 
 const ContactsMenu = () => {
     return (
