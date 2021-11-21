@@ -62,7 +62,7 @@ const MeetingRoom = () => {
        
       })
       socket.on("all-users" , users => {
-          users = users.filter( user => ( user.userName != name))
+        //   users = users.filter( user => ( user.userName != name))
         setActiveUsers(users)
       })
   }, [])
@@ -79,7 +79,7 @@ const MeetingRoom = () => {
                         height : activeUsers.length === 0 ?  600 : 200,
                     }}
                     > </Camera>
-                    {activeUsers.map((user , index) =>
+                    {activeUsers.filter( user => ( user.userName != name)).map((user , index) =>
                     <View key={index} style={styles.activeUserContainer}>
                        <Text style={{color : "white"}}>{user.userName}</Text>
                     </View>
