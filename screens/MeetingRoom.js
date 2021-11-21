@@ -50,6 +50,9 @@ const MeetingRoom = () => {
                height : 600,
            }}
         > </Camera>
+          <View style={styles.menu}>
+                  
+          </View>
         </SafeAreaView>) : (
             <StartMeeting 
             name={name} 
