@@ -61,5 +61,12 @@ const styles = StyleSheet.create({
     textInput:{
         color: "white",
         fontSize : 18
+    },
+    startMeetingButton : {
+        width: 350,
+        marginTop : 20,
+        justifyContent : "center",
+        alignItems : "center",
+        
     }
 })
