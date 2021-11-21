@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import ChatHeader from './ChatHeader'
 
-const Chat = ( { modalVisible ,setModalVisible}) => {
+const Chat = ({ modalVisible ,setModalVisible}) => {
     return (
         <View style={styles.container}>
             <ChatHeader/>
