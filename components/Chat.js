@@ -44,6 +44,12 @@ const styles = StyleSheet.create({
       borderColor : "#2f2f2f",
       padding : 12 ,
       borderTopWidth : 1,
+  } ,
+  textInput : {
+      height : 40,
+      color : "#efefef",
+      borderColor : "#595859",
+      borderWidth : 1,
   }
 
 })
