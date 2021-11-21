@@ -1,10 +1,13 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import Header from '../components/Header'
+import SearchBar from '../components/SearchBar'
 
 const Home = () => {
     return (
         <View>
-            <Text></Text>
+            <Header/>
+            <SearchBar/>
         </View>
     )
 }
