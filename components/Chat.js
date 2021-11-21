@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 
 const Chat = () => {
     return (
-        <View>
+        <View style={styles.container}>
             <Text></Text>
         </View>
     )
@@ -11,4 +11,7 @@ const Chat = () => {
 
 export default Chat
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {}
+
+})

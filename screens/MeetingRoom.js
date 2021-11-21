@@ -4,6 +4,7 @@ import StartMeeting from '../components/StartMeeting'
 import FontAwesome from "react-native-vector-icons/FontAwesome"
 import { io } from "socket.io-client";
 import { Camera } from 'expo-camera';
+import Chat from '../components/Chat';
  
 let socket;
 
@@ -81,7 +82,10 @@ const MeetingRoom = () => {
                    setModalVisible(!modalVisible)
                }}
              >
-                 <Text></Text>
+                 <Chat 
+                  modalVisible={modalVisible}
+                 setModalVisible={setModalVisible}
+                 />
              </Modal>
     
     
