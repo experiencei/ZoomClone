@@ -7,7 +7,12 @@ const MeetingRoom = () => {
   const [roomId , setRoomId] = useState('')
     return (
         <View style={styles.container}>
-            <StartMeeting/>
+            <StartMeeting 
+            name={name} 
+            setName={setName}
+            roomId={roomId}
+            setRoomId={setRoomId}
+            />
         </View>
     )
 }
