@@ -80,9 +80,10 @@ const MeetingRoom = () => {
           {menuIcons.map((icon , index) => 
                  <TouchableOpacity
                       style={styles.tile}
+                      key={index}
                  >
-                     <FontAwesome name={"microphone"} size={24} color="#efefef" />
-                     <Text style={styles.textTile}>Mute</Text>
+                     <FontAwesome name={icon.name} size={24} color="#efefef" />
+                     <Text style={styles.textTile}>{icon.title}</Text>
                  </TouchableOpacity>   
                  )}
           </View>
@@ -116,5 +117,8 @@ const styles = StyleSheet.create({
     textTile : {
         color: "white",
         marginTop :10
+    },
+    menu :{
+        
     }
 })
