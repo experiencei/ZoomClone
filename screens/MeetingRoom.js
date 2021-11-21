@@ -62,6 +62,7 @@ const MeetingRoom = () => {
        
       })
       socket.on("all-users" , users => {
+          users = users.filter( user => ( user.userName != name))
         setActiveUsers(users)
       })
   }, [])
