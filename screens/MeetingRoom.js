@@ -75,8 +75,8 @@ const MeetingRoom = () => {
                         <Camera
                     type={"front"}
                     style={{
-                        width : activeUsers.length === 0 ?"100%" : 200,
-                        height : activeUsers.length === 0 ?  600 : 200,
+                        width : activeUsers.length <= 1 ?"100%" : 200,
+                        height : activeUsers.length <= 1 ?  600 : 200,
                     }}
                     > </Camera>
                     {activeUsers.filter( user => ( user.userName != name)).map((user , index) =>
