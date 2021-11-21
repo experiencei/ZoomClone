@@ -5,7 +5,7 @@ import ChatHeader from './ChatHeader'
 const Chat = ({ modalVisible ,setModalVisible}) => {
     return (
         <View style={styles.container}>
-            <SafeAreaView>
+            <SafeAreaView  style={{ height: "100%"}}>
                 <ChatHeader/>
             </SafeAreaView>
         </View>
