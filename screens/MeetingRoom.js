@@ -80,7 +80,7 @@ const MeetingRoom = () => {
                     > </Camera>
                     {activeUsers.map((user , index) =>
                     <View key={index} style={styles.activeUserContainer}>
-                       <Text style={{color : "white"}}>{user}</Text>
+                       <Text style={{color : "white"}}>{user.userName}</Text>
                     </View>
                     )}
               </View>
