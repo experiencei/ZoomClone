@@ -13,7 +13,7 @@ const MeetingRoom = () => {
   const [activeUsers , setActiveUsers] = useState()
   const [startCameras , setStartCameras] = useState(false)
 
-  const startCamera = () => {
+  const startCamera = async () => {
       const status = await Camera.requestPermissionAsync();
       if (status === "granted"){
         setStartCameras(true)
