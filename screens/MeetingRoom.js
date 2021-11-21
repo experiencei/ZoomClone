@@ -7,9 +7,10 @@ let socket;
 
 
 const MeetingRoom = () => {
-  const [name , setName] = useState('')
-  const [roomId , setRoomId] = useState('')
-  const [activeUsers , setActiveUsers] = useState('')
+  const [name , setName] = useState()
+  const [roomId , setRoomId] = useState()
+  const [activeUsers , setActiveUsers] = useState()
+  const [startCameras , setStartCameras] = useState(false)
   const joinRoom = () => {
       socket.emit('join-room' , {
           roomId : roomId , userName : name
@@ -28,6 +29,7 @@ const MeetingRoom = () => {
   }, [])
     return (
         <View style={styles.container}>
+        {startCameras ? (<Text> Start Camera</Text>) : (
             <StartMeeting 
             name={name} 
             setName={setName}
@@ -35,6 +37,8 @@ const MeetingRoom = () => {
             setRoomId={setRoomId}
             joinRoom={joinRoom}
             />
+        )}
+          
         </View>
     )
 }
