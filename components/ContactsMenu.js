@@ -6,7 +6,7 @@ import AntDesign from "react-native-vector-icons/AntDesign";
 const contactsMenuButtons = [
     {
         type: 'starred',
-        
+        name : "Starred",
     },
     {
         type: 'contact',
@@ -40,7 +40,7 @@ const ContactsMenu = () => {
                     ) }
                     
                     <Text style={styles.text}>
-                        Starred
+                        {contact.name}
                     </Text>
             </View>
         )}
@@ -74,6 +74,8 @@ const styles = StyleSheet.create({
         borderRadius : 200
     },
     image : {
-        
+       width : 55,
+       height : 55,
+       borderRadius :20,
     },
 })
