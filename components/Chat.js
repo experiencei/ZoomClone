@@ -21,6 +21,7 @@ const Chat = ({ modalVisible ,setModalVisible}) => {
                              value={messageText}
                              onChangeText={text => setMessageText(text)}
                              style={styles.textInput}
+                             placeholderTextColor = "#050000"
                              placeholder="Tap here to chat"
                          />
                      </View>
